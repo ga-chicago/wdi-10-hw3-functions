@@ -20,7 +20,7 @@ function checkPalindrome (palindrome) {
 
 // Digit Sum
 const reducer = (accumulator, currentValue) => accumulator + currentValue;
-// reducer is taking 2 numbers in the array, adding them to each other and then adding to current value, and so on. NEED THIS FUNCTION TO USE .reduce().
+// reducer is taking 2 numbers in the array, adding them to each other and then adding to current value, and so on; this is similar to how a for loop works. NEED THIS FUNCTION TO USE .reduce().
 
 function sumDigits(number) {
 	// turn the number into an array of WHOLE integers
@@ -38,5 +38,47 @@ function calculateSide(sideA, sideB) {
 	let sideC = Math.sqrt(sideCSquare)
 	return sideC
 }
+
+// Sum Array
+let thisArray = [9, 3, 2, 6, 8]
+let thatArray = [2, 4, 6, 8, 1]
+function sumArray(numArray) {
+	// put the total in an empty var
+	var sum = 0
+	// iterate through a number array
+	for (i = 0; i < numArray.length; i++) {
+	// add next number in array to previous number and add to sum
+	sum += numArray[i]
+	// ...so this is doing what .reduce was doing with less work...
+	}
+	// return the sum of the array
+	return sum
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
