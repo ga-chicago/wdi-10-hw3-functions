@@ -29,3 +29,8 @@ function sumDigits(num){
   }
   return sum
 }
+
+function calculateSide(sideA, sideB){
+  var sideC = sideA * sideA + sideB * sideB;
+  return sideC
+}
