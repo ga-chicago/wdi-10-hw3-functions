@@ -22,11 +22,11 @@ console.log(" ");
 
 
 // 3. Digit Sum -----------------------------------------------
-function sumDigits(num) {
-	let arr = num.toString().split("");
+function sumDigits(numb) {
+	let arr = numb.toString().split("");
 	let sum = 0;
 	
-	for(var i = 0; i<arr.length; i++) {
+	for(let i = 0; i<arr.length; i++) {
     sum += parseInt(arr[i]);
 	} return sum
 }
@@ -58,8 +58,32 @@ console.log("5. Sum Array:");
 console.log("Sum of the digits 1,2,3,4,5,6 equals " + sumArray([1, 2, 3, 4, 5, 6]));
 console.log(" ");
 
+// 6. Prime numbers -------------------------------------------
+function checkPrime(num){
+	for (let i = 2; i < num; i++){
+		if (!(num % i)) {
+			return false;
+		}
+	}
+	return num > 1;
+}
 
+console.log("6. Prime numbers:");
+console.log("1: " + checkPrime(1));
+console.log("2: " + checkPrime(2));
+console.log("3: " + checkPrime(3));
+console.log("4: " + checkPrime(4));
+console.log("5: " + checkPrime(5));
+console.log("6: " + checkPrime(6));
+console.log("7: " + checkPrime(7));
 
+console.log("6. Print Primes:");
+function printPrimes(numm){
+	for (let i = 1; i <= numm; i++) {
+		if (checkPrime(i) === true) {
+			console.log(i);
+		}
+	};
+}
 
-
-
+console.log("150: " + printPrimes(150));
