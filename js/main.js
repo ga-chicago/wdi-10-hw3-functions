@@ -32,19 +32,32 @@
 
 //3
 
-function sumDigits(num) {
-	let numStr = num.toString();
-	let arr = numStr.split('');
-	let solution = 0;
-	for (let i = 0; i <= arr.length - 1; i++) {
-		solution += parseInt(arr[i], 10);
-	}
+// function sumDigits(num) {
+// 	let numStr = num.toString();
+// 	let arr = numStr.split('');
+// 	let solution = 0;
+// 	for (let i = 0; i <= arr.length - 1; i++) {
+// 		solution += parseInt(arr[i], 10);
+// 	}
+// 	return console.log(solution);
+// }
+
+// sumDigits(123); // 6
+// sumDigits(55555); // 25
+// sumDigits(2317497); // 33
+
+
+//4
+
+function calculateSide(sideA, sideB) {
+	let num = Math.pow(sideA, 2) + Math.pow(sideB, 2);
+	let solution = Math.sqrt(num);
 	return console.log(solution);
 }
 
-sumDigits(123); // 6
-sumDigits(55555); // 25
-sumDigits(2317497); // 33
+calculateSide(8,6); //10
+calculateSide(10,14); //17.204
+calculateSide(15, 20); //25
 
 
 
