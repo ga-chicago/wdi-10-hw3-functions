@@ -16,4 +16,11 @@ function checkPalindrome (palindrome) {
 }
 
 // Digit Sum
+const reducer = (accumulator, currentValue) => accumulator + currentValue;
+
+function sumDigits(number) {
+	let numArray = number.toString(10).split("").map(Number)
+	return numArray.reduce(reducer);
+}
+
 
