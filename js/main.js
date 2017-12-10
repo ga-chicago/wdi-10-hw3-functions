@@ -62,24 +62,46 @@
 
 //5
 
-function sumArray(arr) {
-	let sum = 0;
-	for (let i = 0; i <= arr.length - 1; i++) {
-		sum += arr[i];
-	}
-	return console.log(sum);
-}
+// function sumArray(arr) {
+// 	let sum = 0;
+// 	for (let i = 0; i <= arr.length - 1; i++) {
+// 		sum += arr[i];
+// 	}
+// 	return console.log(sum);
+// }
 
-sumArray([1,3,7,10]); //21
-sumArray([0.2,6,-1,10]); //15.2
-sumArray([2,8,10,0,1,1,1]); //23
+// sumArray([1,3,7,10]); //21
+// sumArray([0.2,6,-1,10]); //15.2
+// sumArray([2,8,10,0,1,1,1]); //23
 
 
 //6
 
+function checkPrime(num) {
+	let isPrime = true;
+	let numRoot = Math.sqrt(num);
+	for (let i = 2; i <= numRoot; i++) {
+		if (Number.isInteger(num / i)) {
+			isPrime = false;
+		}
+	}
+	return isPrime;
+}
 
+// console.log(checkPrime(11)); //true
+// console.log(checkPrime(9)); //false
+// console.log(checkPrime(181)); //true
 
-
+function printPrimes(max) {
+	for (let i = 2; i <= max; i++) {
+		if (checkPrime(i)) {
+			console.log(i+" is a prime number.");
+		}
+		else {
+			console.log(i+" is not a prime number.");
+		}
+	}
+}
 
 
 
