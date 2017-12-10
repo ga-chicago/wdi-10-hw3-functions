@@ -169,11 +169,24 @@ function fancyPalindrome(str) {
 	}
 }
 
-console.log(fancyPalindrome('@#^)#@%r@#(*&ace>:ca@##:r')); //true 'racecar'
+// console.log(fancyPalindrome('@#^)#@%r@#(*&ace>:ca@##:r')); //true 'racecar'
 
 
+//3
 
+function reverseString2(str) {
+	let arr = [];
+	let rev = "";
+	for (let i = str.length - 1; i >= 0; i--){
+		arr.push(str.charAt(i));
+	}
+	for (let i = 0; i <= arr.length - 1; i++){
+		rev += arr[i];
+	}
+	console.log(rev);
+}
 
+// reverseString2('michael weber'); //'rebew leahcim'
 
 
 
