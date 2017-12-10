@@ -7,3 +7,12 @@
 //scope determines what variable are accessible. ie a global variable would be accessible to all function, while a local variable is only available to one function
 
 
+function palinDrome(str){
+  var arr = str.split("")
+  arr = arr.reverse()
+  var str2 = arr.join("")
+  if(str === str2){
+    return true;
+  }
+  return false;
+}
