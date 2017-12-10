@@ -49,15 +49,37 @@
 
 //4
 
-function calculateSide(sideA, sideB) {
-	let num = Math.pow(sideA, 2) + Math.pow(sideB, 2);
-	let solution = Math.sqrt(num);
-	return console.log(solution);
+// function calculateSide(sideA, sideB) {
+// 	let num = Math.pow(sideA, 2) + Math.pow(sideB, 2);
+// 	let solution = Math.sqrt(num);
+// 	return console.log(solution);
+// }
+
+// calculateSide(8,6); //10
+// calculateSide(10,14); //17.204
+// calculateSide(15, 20); //25
+
+
+//5
+
+function sumArray(arr) {
+	let sum = 0;
+	for (let i = 0; i <= arr.length - 1; i++) {
+		sum += arr[i];
+	}
+	return console.log(sum);
 }
 
-calculateSide(8,6); //10
-calculateSide(10,14); //17.204
-calculateSide(15, 20); //25
+sumArray([1,3,7,10]); //21
+sumArray([0.2,6,-1,10]); //15.2
+sumArray([2,8,10,0,1,1,1]); //23
+
+
+//6
+
+
+
+
 
 
 
