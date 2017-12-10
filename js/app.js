@@ -31,6 +31,16 @@ function sumDigits(num){
 }
 
 function calculateSide(sideA, sideB){
+  // side c = sideA^2 + sideB^2
   var sideC = sideA * sideA + sideB * sideB;
   return sideC
+}
+
+
+function sumArray(arr){
+  let sum = 0;
+  for(var i = 0; i < arr.length; i++){
+    sum = sum + arr[i];
+  }
+  return sum
 }
