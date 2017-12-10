@@ -134,7 +134,38 @@ function insertDash(num) {
 }
 
 
-insertDash(213652781395); //21-3652781-3-9
+// insertDash(213652781395); //21-3652781-3-9
+
+
+
+//HUNGRY
+
+//1
+
+function sumArrayTwo(arr) {
+	let sum = arr.reduce(function(curr, next) {
+		return curr + next;
+	}, 0)
+	console.log(sum);
+}
+
+// sumArrayTwo([0,1,2,3,4,10]); //20
+// sumArrayTwo([80,38,-9,0.4, 2]); //111.4
+
+
+//2 
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
