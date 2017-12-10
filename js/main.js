@@ -10,21 +10,44 @@
 
 //2
 
-function checkPalindrome(str) {
-	let cleanStr = str.split(' ').join('').toLowerCase();
-	let arr = cleanStr.split('');
-	let arrEnd = arr.length - 1;
-	for (let i = 0; i <= Math.floor(arr.length / 2); i++) {
-		if (arr[i] !== arr[arrEnd - i]) {
-			return false;
-		}
-		else {
-			return true;
-		}
+// function checkPalindrome(str) {
+// 	let cleanStr = str.split(' ').join('').toLowerCase();
+// 	let arr = cleanStr.split('');
+// 	let arrEnd = arr.length - 1;
+// 	for (let i = 0; i <= Math.floor(arr.length / 2); i++) {
+// 		if (arr[i] !== arr[arrEnd - i]) {
+// 			return false;
+// 		}
+// 		else {
+// 			return true;
+// 		}
+// 	}
+// }
+
+// console.log(checkPalindrome('race car')); // true
+// console.log(checkPalindrome('rAcE cAR')); // true
+// console.log(checkPalindrome('james bardoLPh')); // false
+// console.log(checkPalindrome('ab b c bb a')); // true
+
+
+//3
+
+function sumDigits(num) {
+	let numStr = num.toString();
+	let arr = numStr.split('');
+	let solution = 0;
+	for (let i = 0; i <= arr.length - 1; i++) {
+		solution += parseInt(arr[i], 10);
 	}
+	return console.log(solution);
 }
 
-console.log(checkPalindrome('race car'));
-console.log(checkPalindrome('rAcE cAR'));
-console.log(checkPalindrome('james bardoLPh'));
-console.log(checkPalindrome('ab b c bb a'));
+sumDigits(123); // 6
+sumDigits(55555); // 25
+sumDigits(2317497); // 33
+
+
+
+
+
+
