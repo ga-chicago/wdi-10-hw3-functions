@@ -155,6 +155,22 @@ function sumArrayTwo(arr) {
 
 //2 
 
+function fancyPalindrome(str) {
+	let cleanStr = str.split(' ').join('').toLowerCase().replace(/\W/g, '');
+	let arr = cleanStr.split('');
+	let arrEnd = arr.length - 1;
+	for (let i = 0; i <= Math.floor(arr.length / 2); i++) {
+		if (arr[i] !== arr[arrEnd - i]) {
+			return false;
+		}
+		else {
+			return true;
+		}
+	}
+}
+
+console.log(fancyPalindrome('@#^)#@%r@#(*&ace>:ca@##:r')); //true 'racecar'
+
 
 
 
