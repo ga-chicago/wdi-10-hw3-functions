@@ -189,6 +189,13 @@ function reverseString2(str) {
 // reverseString2('michael weber'); //'rebew leahcim'
 
 
+//4
+
+//a. pseudo classes allow for the creation of dynamic selectors on otherwise static elements, whereas pseudo elements create page styling that acts as though elements exist in their place, when in reality they are simply positioned and styled relative to the actual element they are attached to
+
+//b. see css assignment
+
+
 
 
 
