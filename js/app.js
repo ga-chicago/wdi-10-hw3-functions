@@ -8,9 +8,9 @@
 // Palindrome
 function checkPalindrome (palindrome) {
 	// convert palindrom to lowercase and turn to an array of characters
-	smallCasePal = palindrome.toLowerCase().split("").join("")
+	smallCasePal = palindrome.toLowerCase().split("").join("");
 	// create another array that is the reverse of the first
-	var reversePalindrome = palindrome.split("").reverse().join("").toLowerCase()
+	var reversePalindrome = palindrome.split("").reverse().join("").toLowerCase();
 	// compare the arrays, if they match, return true, if not return false
 	if (smallCasePal === reversePalindrome) {
 		return true;
@@ -25,7 +25,7 @@ const reducer = (accumulator, currentValue) => accumulator + currentValue;
 function sumDigits(number) {
 	// turn the number into an array of WHOLE integers
 	// How: make a string, split the string, use . map to make numbers (from library)
-	let numArray = number.toString(10).split("").map(Number)
+	let numArray = number.toString(10).split("").map(Number);
 	// 10 = radix number (so 0-9)
 	return numArray.reduce(reducer);
 }
@@ -33,27 +33,53 @@ function sumDigits(number) {
 // Pythagoras
 function calculateSide(sideA, sideB) {
 	// sideA squared + sideB squared = sideC squared
-	let sideCSquare = (Math.pow(sideA, 2) + Math.pow(sideB, 2))
+	let sideCSquare = (Math.pow(sideA, 2) + Math.pow(sideB, 2));
 	// return square root of squareC
-	let sideC = Math.sqrt(sideCSquare)
-	return sideC
+	let sideC = Math.sqrt(sideCSquare);
+	return sideC;
 }
 
 // Sum Array
 let thisArray = [9, 3, 2, 6, 8]
 let thatArray = [2, 4, 6, 8, 1]
 function sumArray(numArray) {
-	// put the total in an empty var
+	// make an empty var to catch the total
 	var sum = 0
 	// iterate through a number array
 	for (i = 0; i < numArray.length; i++) {
 	// add next number in array to previous number and add to sum
 	sum += numArray[i]
 	// ...so this is doing what .reduce was doing with less work...
-	}
+	};
 	// return the sum of the array
-	return sum
+	return sum;
 }
+
+// Prime Numbers
+// Step One
+function checkPrime(num) {
+	// divide num by all numbers up to num -1
+	for (i = 2; i < num - 1; i++) {
+		// if num is divisible by ANY but 1 and itself return false
+		if (num % i == 0) {
+		return false
+		} 
+	} 
+	return true 
+}
+
+// Step Two
+function printPrimes(limit){
+    // loop through all numbers up to limit
+    // start at 2, since 1 is not prime
+    for(var i = 2; i <= limit; i++ ) { 
+    // call checkPrime to see if each iteration is prime
+      if(checkPrime(i)===true) {
+          // Print prime numbers
+          console.log(i)
+        }
+    }
+}  
 
 
 
