@@ -10,19 +10,19 @@
 
 //2
 
-// function checkPalindrome(str) {
-// 	let cleanStr = str.split(' ').join('').toLowerCase();
-// 	let arr = cleanStr.split('');
-// 	let arrEnd = arr.length - 1;
-// 	for (let i = 0; i <= Math.floor(arr.length / 2); i++) {
-// 		if (arr[i] !== arr[arrEnd - i]) {
-// 			return false;
-// 		}
-// 		else {
-// 			return true;
-// 		}
-// 	}
-// }
+function checkPalindrome(str) {
+	let cleanStr = str.split(' ').join('').toLowerCase();
+	let arr = cleanStr.split('');
+	let arrEnd = arr.length - 1;
+	for (let i = 0; i <= Math.floor(arr.length / 2); i++) {
+		if (arr[i] !== arr[arrEnd - i]) {
+			return false;
+		}
+		else {
+			return true;
+		}
+	}
+}
 
 // console.log(checkPalindrome('race car')); // true
 // console.log(checkPalindrome('rAcE cAR')); // true
@@ -32,15 +32,15 @@
 
 //3
 
-// function sumDigits(num) {
-// 	let numStr = num.toString();
-// 	let arr = numStr.split('');
-// 	let solution = 0;
-// 	for (let i = 0; i <= arr.length - 1; i++) {
-// 		solution += parseInt(arr[i], 10);
-// 	}
-// 	return console.log(solution);
-// }
+function sumDigits(num) {
+	let numStr = num.toString();
+	let arr = numStr.split('');
+	let solution = 0;
+	for (let i = 0; i <= arr.length - 1; i++) {
+		solution += parseInt(arr[i], 10);
+	}
+	return console.log(solution);
+}
 
 // sumDigits(123); // 6
 // sumDigits(55555); // 25
@@ -49,11 +49,11 @@
 
 //4
 
-// function calculateSide(sideA, sideB) {
-// 	let num = Math.pow(sideA, 2) + Math.pow(sideB, 2);
-// 	let solution = Math.sqrt(num);
-// 	return console.log(solution);
-// }
+function calculateSide(sideA, sideB) {
+	let num = Math.pow(sideA, 2) + Math.pow(sideB, 2);
+	let solution = Math.sqrt(num);
+	return console.log(solution);
+}
 
 // calculateSide(8,6); //10
 // calculateSide(10,14); //17.204
@@ -62,13 +62,13 @@
 
 //5
 
-// function sumArray(arr) {
-// 	let sum = 0;
-// 	for (let i = 0; i <= arr.length - 1; i++) {
-// 		sum += arr[i];
-// 	}
-// 	return console.log(sum);
-// }
+function sumArray(arr) {
+	let sum = 0;
+	for (let i = 0; i <= arr.length - 1; i++) {
+		sum += arr[i];
+	}
+	return console.log(sum);
+}
 
 // sumArray([1,3,7,10]); //21
 // sumArray([0.2,6,-1,10]); //15.2
@@ -77,31 +77,31 @@
 
 //6
 
-// function checkPrime(num) {
-// 	let isPrime = true;
-// 	let numRoot = Math.sqrt(num);
-// 	for (let i = 2; i <= numRoot; i++) {
-// 		if (Number.isInteger(num / i)) {
-// 			isPrime = false;
-// 		}
-// 	}
-// 	return isPrime;
-// }
+function checkPrime(num) {
+	let isPrime = true;
+	let numRoot = Math.sqrt(num);
+	for (let i = 2; i <= numRoot; i++) {
+		if (Number.isInteger(num / i)) {
+			isPrime = false;
+		}
+	}
+	return isPrime;
+}
 
-// // console.log(checkPrime(11)); //true
-// // console.log(checkPrime(9)); //false
-// // console.log(checkPrime(181)); //true
+// console.log(checkPrime(11)); //true
+// console.log(checkPrime(9)); //false
+// console.log(checkPrime(181)); //true
 
-// function printPrimes(max) {
-// 	for (let i = 2; i <= max; i++) {
-// 		if (checkPrime(i)) {
-// 			console.log(i+" is a prime number.");
-// 		}
-// 		else {
-// 			console.log(i+" is not a prime number.");
-// 		}
-// 	}
-// }
+function printPrimes(max) {
+	for (let i = 2; i <= max; i++) {
+		if (checkPrime(i)) {
+			console.log(i+" is a prime number.");
+		}
+		else {
+			console.log(i+" is not a prime number.");
+		}
+	}
+}
 
 
 //7
@@ -134,7 +134,7 @@ function insertDash(num) {
 }
 
 
-
+insertDash(213652781395); //21-3652781-3-9
 
 
 
