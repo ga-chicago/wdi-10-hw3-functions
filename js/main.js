@@ -77,31 +77,64 @@
 
 //6
 
-function checkPrime(num) {
-	let isPrime = true;
-	let numRoot = Math.sqrt(num);
-	for (let i = 2; i <= numRoot; i++) {
-		if (Number.isInteger(num / i)) {
-			isPrime = false;
+// function checkPrime(num) {
+// 	let isPrime = true;
+// 	let numRoot = Math.sqrt(num);
+// 	for (let i = 2; i <= numRoot; i++) {
+// 		if (Number.isInteger(num / i)) {
+// 			isPrime = false;
+// 		}
+// 	}
+// 	return isPrime;
+// }
+
+// // console.log(checkPrime(11)); //true
+// // console.log(checkPrime(9)); //false
+// // console.log(checkPrime(181)); //true
+
+// function printPrimes(max) {
+// 	for (let i = 2; i <= max; i++) {
+// 		if (checkPrime(i)) {
+// 			console.log(i+" is a prime number.");
+// 		}
+// 		else {
+// 			console.log(i+" is not a prime number.");
+// 		}
+// 	}
+// }
+
+
+//7
+
+function insertDash(num) {
+	let arr = num.toString().split('');
+	let oddNum = false;
+	let withDash = [];
+	withDash.push(arr[0]);
+	arr[0] % 2 === 1 ? oddNum = true : oddNum;
+	for (let i = 1; i <= arr.length - 1; i++) {
+		if (oddNum === true && Number(arr[i]) % 2 !== 0) {
+			withDash.push("-"+arr[i]);
+			oddNum = true;
 		}
-	}
-	return isPrime;
-}
-
-// console.log(checkPrime(11)); //true
-// console.log(checkPrime(9)); //false
-// console.log(checkPrime(181)); //true
-
-function printPrimes(max) {
-	for (let i = 2; i <= max; i++) {
-		if (checkPrime(i)) {
-			console.log(i+" is a prime number.");
+		else if (oddNum === false && Number(arr[i]) % 2 !== 0) {
+			withDash.push(arr[i]);
+			oddNum = true;
 		}
 		else {
-			console.log(i+" is not a prime number.");
+			withDash.push(arr[i]);
+			oddNum = false;
 		}
 	}
+	let solution = "";
+	for (let i = 0; i < withDash.length - 1; i++) {
+		solution += withDash[i];
+	}
+	return console.log(solution);
 }
+
+
+
 
 
 
