@@ -44,3 +44,39 @@ function sumArray(arr){
   }
   return sum
 }
+
+
+
+
+function checkPrime(num){
+  for(var i = 2; i < num; i++){
+    if(num % i === 0){
+      return false 
+    }
+  }
+  return true
+}
+
+function printPrimes(limit) {
+    // make array of all numbers from 0 to limit
+
+
+
+    for(var i = 2; i<=limit; i++) {
+    // call checkPrime to see if each iteration is Prime
+      if(checkPrime(i)===true) {
+          console.log(i);
+      }
+      // feed into array of all Primes
+    }
+  // return array of all primes
+
+}
+
+
+
+
+
+
+
+
