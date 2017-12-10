@@ -15,17 +15,33 @@
 // 	}	return false;
 // }
 
-// console.log("Palindrome mom " + palindrome("moM"));
-// console.log("Palindrome  aunt " + palindrome("AuNt"));
+// console.log("2. Palindrome:");
+// console.log("Mom: " + palindrome("moM"));
+// console.log("Aunt: " + palindrome("AuNt"));
 
 
 // 3. Digit Sum -----------------------------------------------
-function sumDigits(num) {
-	let arr = num.toString().split("");
-	let sum = 0;
+// function sumDigits(num) {
+// 	let arr = num.toString().split("");
+// 	let sum = 0;
 	
-	for(var i = 0; i<arr.length; i++) {
-    sum += parseInt(arr[i]);
-	} return sum
+// 	for(var i = 0; i<arr.length; i++) {
+//     sum += parseInt(arr[i]);
+// 	} return sum
+// }
+
+// console.log("3. Digit Sum:");
+// console.log("555 equals " + sumDigits(555));
+
+// 4. Pythargoras ---------------------------------------------
+function calculateSide(sideA, sideB){
+	return Math.sqrt((sideA * sideA) + (sideB * sideB));
 }
-console.log("sumDigits 555 is " + sumDigits(555));
+
+console.log("4. Pythagoras:");
+console.log("8 and 6 = " + calculateSide(8,6));
+
+
+
+
+
