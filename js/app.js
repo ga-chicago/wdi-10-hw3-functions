@@ -5,13 +5,15 @@
 
 // c: Scope comes in two varieties: local and global. If we think about it in terms of a box containing scope, global scope is available both inside and out side of the box. Local scope is only available inside of the box.
 
+// Palindrome
 function checkPalindrome (palindrome) {
-	var reversePalindrome = palindrome.split("").reverse().join("")
-	if (palindrome === reversePalindrome) {
+	smallCasePal = palindrome.toLowerCase().split("").join("")
+	var reversePalindrome = palindrome.split("").reverse().join("").toLowerCase()
+	if (smallCasePal === reversePalindrome) {
 		return true;
 	}; 
 	return false;
 }
 
-// let palindrome = "kait"
-// let reversePalindrome = palindrome.split("").reverse().join("")
+// Digit Sum
+
