@@ -16,3 +16,16 @@ function palinDrome(str){
   }
   return false;
 }
+
+
+function sumDigits(num){
+  //string is now a version of num
+  var str = num.toString();
+  //digitArray is now an array with each digit as a character
+  var digitArray = str.split("");
+  var sum = 0
+  for(i = 0; i < digitArray.length; i++ ){
+    sum = sum + parseInt(digitArray[i]);
+  }
+  return sum
+}
