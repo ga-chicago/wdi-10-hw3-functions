@@ -35,7 +35,21 @@
 
 // const calculateSide = (sideA, sideB) => {
 // 	let sideC = Math.sqrt(Math.pow(sideA,2)+Math.pow(sideB, 2));
-// 	return sideC
+// 	return "The hypotanus of a triangle with sides of " + sideA + " & " + sideB + " is " + sideC
 // }
+
+
+	// 5. Sum Array
+
+const sumArray = (numArray) => {
+	let sum = 0
+	for(i = 0; i < numArray.length; i++){
+		sum = sum + numArray[i];
+	};
+	return "The sum of " + numArray + " is " + sum;
+};
+
+
+
 
 
