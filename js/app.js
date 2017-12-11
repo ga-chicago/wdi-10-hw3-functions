@@ -18,4 +18,15 @@
 // };
 
 
+	// 3. Digital Sum
+
+// const sumDigits = (num) => {
+// 	let numArray = num.toString().split("");
+// 	let sum = 0
 	
+// 	for(i = 0; i < numArray.length; i++){
+// 		sum = sum + parseInt(numArray[i], 10);
+// 	};
+// 	return sum;
+// };
+
