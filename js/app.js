@@ -18,3 +18,28 @@ function checkPalindrome (str){
 }
 console.log( checkPalindrome("RaDar") );
 // convert all to lowercase then turn to array with split then use filter to loop through each charater and removes the space charaters and then use join to convert back to a string // turn back into array to reverse then back into a string // then check for equality
+
+//****************DIGIT SUM************************************
+function sumDigits(num){
+
+}
+sumDigits(42);
+
+//*****************PRIME NUMBERS********************************
+function checkPrime(num){
+    for(let i=2; i <= Math.sqrt(num); i++){
+        if(num % i === 0) {
+            return false
+        }
+    }
+    return true;
+}
+
+function printPrimes (limit){
+    for(let i=1; i <= limit; i++){
+        if (checkPrime(i)) {
+            console.log(i);
+        }
+    }
+}
+printPrimes(97);
