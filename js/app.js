@@ -41,15 +41,37 @@
 
 	// 5. Sum Array
 
-const sumArray = (numArray) => {
-	let sum = 0
-	for(i = 0; i < numArray.length; i++){
-		sum = sum + numArray[i];
-	};
-	return "The sum of " + numArray + " is " + sum;
-};
+// const sumArray = (numArray) => {
+// 	let sum = 0
+// 	for(i = 0; i < numArray.length; i++){
+// 		sum = sum + numArray[i];
+// 	};
+// 	return "The sum of " + numArray + " is " + sum;
+// };
 
 
+	// 6. Prime Numbers
+
+// const checkPrime = (num) => {
+// 	let sqrtOfNum = Math.sqrt(num);
+
+// 	if (num ===1) {
+// 		return num + " is not a prime number";
+// 	}
+// 	else{
+// 		for(i = 2; i <= sqrtOfNum; i++){
+// 			if (num % i === 0) {
+// 				return num + " is not a prime number";
+// 			};
+// 		}; console.log(num + " is a prime number");
+// 	};
+// };
+
+// const printPrimes = (limit) => {
+// 	for(j = 1; j <= limit; j++){
+// 		checkPrime(j);
+// 	};
+// };
 
 
 
