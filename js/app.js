@@ -12,3 +12,11 @@
 // When a function or variable is stated while nested in a larger function than it cannot be used outside of where it is stated (local). 
 // When a function or variable is stated un nested it can be used anywhere (global).
 
+// 2. Palindrome
+
+function checkPalindrome(word) {
+	let cap = word.toUpperCase();
+	let flip = cap.split("").reverse().join("");
+	return cap === flip;
+	console.log(cap === flip);
+}
