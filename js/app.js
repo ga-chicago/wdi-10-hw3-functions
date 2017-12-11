@@ -95,5 +95,28 @@ function printPrimes(numm){
 console.log("150: " + printPrimes(150));
 
 // 7. Insert Dash ---------------------------------------------
+function insertDash(num){
+	let numArray = num.toString().split("");
+	let bucket = "";
+	let oddArray = ["1","3","5","7","9"];
+
+	for (var i = 0; i < numArray.length; i++) {
+		if (!(oddArray.includes(numArray[i]))) { //Checks if even digit 
+			bucket += numArray[i]; // Send even digit to the bucket
+		} else if (oddArray.includes(numArray[i])) { //Checks if digit is odd 
+			if (oddArray.includes(numArray[i-1])) { //Checks if the next element is also odd
+				bucket += "-";
+			}
+			bucket += numArray[i];
+		}
+	}
+	return bucket;
+}
+
+console.log("7. Insert Dash");
+console.log(insertDash(454793));
+
+
+
 
 
