@@ -81,7 +81,38 @@ function printPrimes(limit){
     }
 }  
 
-
+// Insert Dash
+function insertDash(num) {
+	// turn a number into a string array 
+	let numberArray = num.toString().split("").map(Number);
+	// log to check
+	console.log(numberArray);
+	// create an array of odd numbers for scientific comparison
+	let oddNumbers = [1, 3, 5, 7, 9];
+	// log to check
+	console.log(oddNumbers);
+	// create a string to hold numbers once checked
+	let dashString = " ";
+	// iterate through the array
+	for (i = 0; i < numberArray.length; i++) {
+		// is it an odd number? IS IT? It is if you divide by 2 and there's something left
+		if (numberArray[i] % 2 === 0) {
+			// add it to da stringggg
+			dashString += numberArray[i];
+		// note to self: check oddNumbers INCLUDES i, can't do against numberarray[i] bc it's just one number
+		} else if (oddNumbers.includes(numberArray[i])){
+			dashString += numberArray[i];
+			// if the next number is also odd, add it with a dassshhhhh
+			if(oddNumbers.includes(numberArray[i+1]))
+			dashString += "-" ;
+		} else {	
+		// make sure everyone is joining the dashString partay
+			dashString += numberArray[i];
+		}
+	}
+	return dashString
+}
+	
 
 
 
