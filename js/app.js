@@ -60,12 +60,18 @@ console.log(" ");
 
 // 6. Prime numbers -------------------------------------------
 function checkPrime(num){
-	for (let i = 2; i < num; i++){
-		if (!(num % i)) {
-			return false;
+	if (num === 1){
+		return false
+	} else if (num === 2){
+		return true;
+	} else {
+		for (let i = 2; i < num; i++){
+			if (!(num % i)) {
+				return false;
+			} 
 		}
+		return true;
 	}
-	return num > 1;
 }
 
 console.log("6. Prime numbers:");
@@ -87,3 +93,7 @@ function printPrimes(numm){
 }
 
 console.log("150: " + printPrimes(150));
+
+// 7. Insert Dash ---------------------------------------------
+
+
