@@ -85,12 +85,10 @@ function printPrimes(limit){
 function insertDash(num) {
 	// turn a number into a string array 
 	let numberArray = num.toString().split("").map(Number);
-	// log to check
-	console.log(numberArray);
+	// log to check;
 	// create an array of odd numbers for scientific comparison
 	let oddNumbers = [1, 3, 5, 7, 9];
 	// log to check
-	console.log(oddNumbers);
 	// create a string to hold numbers once checked
 	let dashString = " ";
 	// iterate through the array
