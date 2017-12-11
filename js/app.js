@@ -11,35 +11,48 @@
 // which can be accesed from anywhere in the code.
 
 //*****************PALINDROME*********************************
-function checkPalindrome (str){
-    var caseString = str.toLowerCase().split("").filter(c => c != ' ').join("");
-    var reverseString = caseString.split("").reverse().join("");
-    return reverseString == caseString;
-}
-console.log( checkPalindrome("RaDar") );
+// function checkPalindrome (str){
+//     var caseString = str.toLowerCase().split("").filter(c => c != ' ').join("");
+//     var reverseString = caseString.split("").reverse().join("");
+//     return reverseString == caseString;
+// }
+// console.log( checkPalindrome("RaDar") );
+
 // convert all to lowercase then turn to array with split then use filter to loop through each charater and removes the space charaters and then use join to convert back to a string // turn back into array to reverse then back into a string // then check for equality
 
 //****************DIGIT SUM************************************
 function sumDigits(num){
+    //split to array to add each
+    var toString = num.toString();
+    var splitNum = toString.split("");
+    // split is not a function of an integer so you need to convert to a string first
 
+    let sum = 0; //placeholder for value you can iterate through array with to later add each
+    for(i=0; i < splitNum.length; i++){
+        // to see sum being iterated and added ~ console.log(sum, "= sum");
+        sum = sum + parseInt(splitNum[i]);
+        // change back to integer to add
+    }
+    return sum;
 }
 sumDigits(42);
 
-//*****************PRIME NUMBERS********************************
-function checkPrime(num){
-    for(let i=2; i <= Math.sqrt(num); i++){
-        if(num % i === 0) {
-            return false
-        }
-    }
-    return true;
-}
 
-function printPrimes (limit){
-    for(let i=1; i <= limit; i++){
-        if (checkPrime(i)) {
-            console.log(i);
-        }
-    }
-}
-printPrimes(97);
+//*****************PRIME NUMBERS********************************
+// function checkPrime(num){
+//     for(let i=2; i <= Math.sqrt(num); i++){
+//         if(num % i === 0) {
+//             return false
+//         }
+//     }
+//     return true;
+// }
+//
+// function printPrimes (limit){
+//     for(let i=1; i <= limit; i++){
+//         if (checkPrime(i)) {
+//             console.log(i);
+//         }
+//     }
+// }
+// printPrimes(97);
