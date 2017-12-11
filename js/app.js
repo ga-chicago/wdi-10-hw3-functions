@@ -27,6 +27,15 @@
 // 	for(i = 0; i < numArray.length; i++){
 // 		sum = sum + parseInt(numArray[i], 10);
 // 	};
-// 	return sum;
+// 	return "The sum of the digits in " + num + " is " + sum;
 // };
+
+
+// 	4. Pythagoras
+
+// const calculateSide = (sideA, sideB) => {
+// 	let sideC = Math.sqrt(Math.pow(sideA,2)+Math.pow(sideB, 2));
+// 	return sideC
+// }
+
 
