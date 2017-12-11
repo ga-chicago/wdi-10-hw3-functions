@@ -4,3 +4,18 @@
 // b. return will stop a function from executing where console.log only prints the called parameter
 // c. Scope affects where a variable can be used. Variables used outside of a funciton have global scope and can be used anwyere. Functions called inside of functions only have scope within that funciton.
 
+
+	// 2. Palindrome
+
+// const checkPalindrome = (str) => {
+// 	let lowerCaseStr = str.toLowerCase()
+
+// 	if(lowerCaseStr === lowerCaseStr.split("").reverse().join("")){
+// 		return str + " is a palindrome";
+// 	} else	{
+// 		return str + " is not a palindrome";
+// 	};
+// };
+
+
+	
