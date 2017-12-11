@@ -1,4 +1,4 @@
-	// 1. verbal questions
+		// 1. verbal questions
 
 // a. parameters are the aliases for the values that will be passed through a funciont, arugments are the actual values
 // b. return will stop a function from executing where console.log only prints the called parameter
@@ -72,6 +72,29 @@
 // 		checkPrime(j);
 // 	};
 // };
+
+
+
+	// 7. Insert Dash
+
+function insertDash (num) {
+	let strArray  = num.toString().split(""); //change number into a string array
+	let numArray = [] //create an empty array to store the numbers
+	
+	for(i = 0; i < strArray.length; i++) { //interate through the array
+		// add the digit
+		numArray.push(strArray[i])
+
+		// if this digit is odd AND the next digit is odd
+		if (strArray[i] % 2 == 1 && strArray[i+1] % 2 == 1) {
+			// add dash to output
+			numArray.push("-");
+		}
+	}
+	return numArray.join("")
+}
+
+
 
 
 
