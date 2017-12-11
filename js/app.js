@@ -14,9 +14,26 @@
 
 // 2. Palindrome
 
-function checkPalindrome(word) {
-	let cap = word.toUpperCase();
-	let flip = cap.split("").reverse().join("");
-	return cap === flip;
-	console.log(cap === flip);
+// function checkPalindrome(word) {
+// 	let cap = word.toUpperCase();
+// 	let flip = cap.split("").reverse().join("");
+// 	return cap === flip;
+// 	console.log(cap === flip);
+// }
+
+// 3. Digit Sum
+
+function sumDigits(int) {
+	let stringInt = int.toString();
+	let output = [];
+	let sum = 0;
+	for (var i = 0; i < int.length; i++) {
+    	output.push(stringInt.charAt(i));
+	}
+
+	for (var i = 0; i < output.length; i++);
+		sum += output[i];
+		console.log(sum);
 }
+
+// 4. 
