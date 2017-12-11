@@ -31,14 +31,26 @@
 //     	output.push(stringInt.charAt(i));
 // 	}
 
-// 	for (var i = 0; i < output.length; i++);
+// 	for (i=0; i < output.length; i++) {
 // 		sum += output[i];
+// 	}
+		
 // 		console.log(sum);
 // }
 
 // 4. Pythagorus
 
-function calculateSide(sideA, sideB) {
-	let sideC = Math.sqrt(Math.pow(sideA, 2) + Math.pow(sideB, 2));
-	console.log(sideC);
+// function calculateSide(sideA, sideB) {
+// 	let sideC = Math.sqrt(Math.pow(sideA, 2) + Math.pow(sideB, 2));
+// 	console.log(sideC);
+// }
+
+// 5. Sum Array
+
+function sumArray(arr) {
+	let sum = 0;
+	for (i=0; i < arr.length; i++) {
+		sum += arr[i];
+	}
+	console.log(sum);
 }
