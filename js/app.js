@@ -47,10 +47,29 @@
 
 // 5. Sum Array
 
-function sumArray(arr) {
-	let sum = 0;
-	for (i=0; i < arr.length; i++) {
-		sum += arr[i];
+// function sumArray(arr) {
+// 	let sum = 0;
+// 	for (i=0; i < arr.length; i++) {
+// 		sum += arr[i];
+// 	}
+// 	console.log(sum);
+// }
+
+// 6. Prime numbers
+
+function checkPrime(num){
+	if (num === 1){
+		return false;
+	} 
+	else if (num === 2){
+		return true;
+	} 
+	else {
+		for (let i = 2; i < num; i++){
+			if (!(num % i)) {
+				return false;
+			} 
+		}
+		return true;
 	}
-	console.log(sum);
 }
