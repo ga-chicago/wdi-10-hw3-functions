@@ -38,15 +38,22 @@ function sumDigits(num){
 }
 sumDigits(42);
 */
-//*********************SUM ARRAYS********************************
-function sumArray(arr){
-    let product = 0;
-    for (i=0; i < arr.length; i++){
-        product = product + arr[i];
-    }
-    return product;
+//*******************PYTHAGONAL*********************************
+function calculateSide(sideA, sideB){
+    var sideC = Math.pow(sideA, 2) + Math.pow(sideB, 2);
+    return Math.sqrt(sideC);
 }
-sumArray([2,3,4]);
+calculateSide(8,6);
+
+//*********************SUM ARRAYS********************************
+// function sumArray(arr){
+//     let product = 0;
+//     for (i=0; i < arr.length; i++){
+//         product = product + arr[i];
+//     }
+//     return product;
+// }
+// sumArray([2,3,4]);
 
 
 
