@@ -21,6 +21,7 @@
 // convert all to lowercase then turn to array with split then use filter to loop through each charater and removes the space charaters and then use join to convert back to a string // turn back into array to reverse then back into a string // then check for equality
 
 //****************DIGIT SUM************************************
+/*
 function sumDigits(num){
     //split to array to add each
     var toString = num.toString();
@@ -36,6 +37,17 @@ function sumDigits(num){
     return sum;
 }
 sumDigits(42);
+*/
+//*********************SUM ARRAYS********************************
+function sumArray(arr){
+    let product = 0;
+    for (i=0; i < arr.length; i++){
+        product = product + arr[i];
+    }
+    return product;
+}
+sumArray([2,3,4]);
+
 
 
 //*****************PRIME NUMBERS********************************
