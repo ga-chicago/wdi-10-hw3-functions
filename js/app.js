@@ -73,12 +73,11 @@ function printPrimes(limit) {
 
 }
 
-
+// DOESNT FUCKING WORK AHHHHHHHH!!!!!
+//maybe running an infinte loop? but doesnt make sense becuase it looks like i ended the loop. Whenever i run it in the browser the browser freezes.
 function insertDash(num){
   //turn numbers entered into string and split them into an array
-  var str = num.toString().split("");
-  //assign array of numbers to variable arr
-  var arr = str
+  var arr = num.toString().split("");
   //iterate through the array
   for(let i = 0; i < arr.length; i++){
     // the if conditional evaluates if there are two odd numbers next to eachother
@@ -86,9 +85,8 @@ function insertDash(num){
       arr.splice(i + 1, 0, '-');
     }
   }
+  return arr.join("")
 }
-
-
 
 
 
