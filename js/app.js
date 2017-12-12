@@ -39,11 +39,11 @@ function sumDigits(num){
 sumDigits(42);
 */
 //*******************PYTHAGONAL*********************************
-function calculateSide(sideA, sideB){
-    var sideC = Math.pow(sideA, 2) + Math.pow(sideB, 2);
-    return Math.sqrt(sideC);
-}
-calculateSide(8,6);
+// function calculateSide(sideA, sideB){
+//     var sideC = Math.pow(sideA, 2) + Math.pow(sideB, 2);
+//     return Math.sqrt(sideC);
+// }
+// calculateSide(8,6);
 
 //*********************SUM ARRAYS********************************
 // function sumArray(arr){
@@ -75,3 +75,44 @@ calculateSide(8,6);
 //     }
 // }
 // printPrimes(97);
+
+
+//********************INSERT DASH*********************************
+//cant iterate through numbers
+// console.log(23423);
+function insertDash (num){
+    let toArray = num.toString().split("");
+    let newArray = [];  // for pushing in one by one (our output)
+
+    // loop through toArray TO BUILD our output
+    for(i=0; i < toArray.length; i++){
+        // add this digit of toArray
+        newArray.push(toArray[i]);
+
+        // if this digit of toArray and the digit after this of toArray are both odd
+        // compare equal value
+        // if(parseInt(toArra[i]) % 2 === 1 && parseInt(toArray[i + 1])){
+        if(toArray[i] % 2 === 1 && toArray[i + 1] % 2 === 1){   // [i + 1] is how you acess the next iteration of the array
+            newArray.push("-");
+        }
+        else if (toArray === newArray.length -1){
+            // dont add dash
+        }
+    }
+    return newArray.join('');
+}
+
+console.log(insertDash(454793));
+
+
+
+
+
+
+
+
+
+
+
+
+
