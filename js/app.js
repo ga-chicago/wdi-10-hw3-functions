@@ -49,7 +49,7 @@ function sumArray(arr){
 
 
 function checkPrime(num){
-  for(var i = 2; i < num; i++){
+  for(var i = 0; i < num; i++){
     if(num % i === 0){
       return false 
     }
@@ -71,6 +71,21 @@ function printPrimes(limit) {
     }
   // return array of all primes
 
+}
+
+
+function insertDash(num){
+  //turn numbers entered into string and split them into an array
+  var str = num.toString().split("");
+  //assign array of numbers to variable arr
+  var arr = str
+  //iterate through the array
+  for(let i = 0; i < arr.length; i++){
+    // the if conditional evaluates if there are two odd numbers next to eachother
+    if(parseInt(arr[i]) % 2 != 0 && parseInt(arr[i + 1]) % 2 != 0){
+      arr.splice(i + 1, 0, '-');
+    }
+  }
 }
 
 
