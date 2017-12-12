@@ -24,23 +24,23 @@ c. scope refers to accessibility of variables in different parts of the code
 ## 2. Palindrome
 Write a function `checkPalindrome` that accepts a single argument, a string. The function should return true (Boolean) if the string is a palindrome, false if it is not. Make sure your function will give the correct answer for words with **capital letters**.  Additionally, make sure that spaces are ignored.
 */
-
+// checks to see if a word is a palindrome
 function palindrome(str)
 {
-console.log("this is first string" + str)
-var arr = str.split("");
-console.log(arr);
-arr = arr.reverse();
-console.log(typeof(arr));
-var str2 = arr.join("");
-console.log("this is second string" + typeof(str2));
+// split string into array
+  var arr = str.split("");
+// reverse array
+  arr = arr.reverse();
+//
+  var str2 = arr.join("");
 
 
-if(str2 == str)
-{
-return true
-}
-return false
+// if second string equals the first string return true
+  if(str2 == str){
+    return true;
+  }
+  // if they are not equal return false
+  return false;
 
 }
 /*
@@ -56,17 +56,15 @@ function sumDigits(num)
 {
 // declaring variable for array and setting it equal to and array of the letters
   var arr = num.toString().split("");
-//print array to screen
-console.log(arr);
+
 // initialize the sum
   var sum = 0;
 // for loop that adds the digits
-    for(var i = 0; i<arr.length; i++)
-    {
+    for(var i = 0; i<arr.length; i++) {
        // add each digit to the sum of previous digits
 	      sum = sum + parseInt(arr[i]);
     }
-return sum
+return sum;
 }
 /*
 4. Pythagoras
@@ -79,31 +77,42 @@ hint: checkout the Math methods in javascript
 
 function calculateSide(sideA, sideB)
 {
-
-  return Math.sqrt(sideA * sideA + SideB * SideB)
+  // returns sqrt
+return Math.sqrt(sideA * sideA + SideB * SideB)
 }
 
+// function that adds all number in an array
 function sumArray(arr)
-{
-  for(var i=0; i<arr.length; i++)
-    {
+{  // for loop that iterates through array
+  for(var i=0; i<arr.length; i++){
+      // add numbers to previous sum
       sum = sum + arr[i];
     }
-    return sum;
+// return the sum
+return sum;
 }
 
 
 function checkPrime(num)
 {
-  // for loop that goes up by i
-  for(var i = 2; i<num; i++)
-  {
-  if(num % i === 0)
-  {
+  if(num < 0){
+    // converts negative nums to positive nums
+     num = Math.abs(num);
+  }  // if num is one return true
+  if(num === 1) {
+    return true;
+    // if num is zero return false
+  }
+  if(num === 0){
     return false;
   }
-
-}
+   //for loop to check the rest of the nums
+  for(var i = 2; i<num; i++) {
+    // if i number is
+    if(num % i === 0){
+      return false;
+    }
+  }
 return true;
 }
 /*
@@ -114,33 +123,29 @@ Write a function insertDash that accepts a number as a parameter and returns a s
 
 // declare function printPrimes that takes one argument which is the limit.
 function printPrimes(limit) {
-    // make array of all numbers from 0 to limit
-
-
-
-    for(var i = 2; i<=limit; i++) {
+    // the for loop iterates through the prime numbers up to the limit passed in as argument
+    for(var i = 1; i<=limit; i++) {
     // call checkPrime to see if each iteration is Prime
       if(checkPrime(i)===true) {
           console.log(i);
       }
-      // feed into array of all Primes
     }
-  // return array of all primes
-
 }
-
+// declare function that puts dash inbetween two odd numbers
 function insertDash(num) {
+  // turns string into array
   var arr = num.toString().split("")
-console.log(arr)
+  // for loop that iterates through the digits
   for(i=0; i<arr.length; i++) {
-console.log(arr[i])
+    // compares consecutive digits to see if both are odd
     if(parseInt(arr[i])%2===1 && parseInt(arr[i+1])%2===1)
-    {
-      arr.splice(i+1,0,"-")
+    { // inserts dash between odd numbers
+      arr.splice(i+1,0,"-");
     }
   }
 
-
-arr = arr.join("")
-return arr
+// turn array into a number
+arr = arr.join("");
+// return number
+return arr;
 }
